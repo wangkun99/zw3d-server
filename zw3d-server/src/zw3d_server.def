@@ -1,0 +1,6 @@
+LIBRARY zw3d_server.dll
+
+EXPORTS
+    ; Explicit exports can go here
+    zw3d_serverInit
+    zw3d_serverExit
