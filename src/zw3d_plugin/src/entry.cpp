@@ -1,8 +1,8 @@
-#include "..\inc\zw3d_serverPr.h"
+#include "entry.h"
 
 // Dynamic library entry function, called when the dll is loaded
 // The function name must be dll name + "Init"
-int zw3d_serverInit()
+int zw3d_pluginInit()
    {
    RegisterCustomCommand();
    RegisterTemplateCommand();
@@ -12,7 +12,7 @@ int zw3d_serverInit()
 
 // Dynamic library entry function, called when the dll is unloaded
 // The function name must be dll name + "Exit"
-int zw3d_serverExit()
+int zw3d_pluginExit()
    {
    UnloadCustomCommand();
    UnloadTemplateCommand();

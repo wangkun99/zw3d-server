@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.37327.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zw3d-server", "zw3d-server\zw3d-server.vcxproj", "{6BF5A917-96F8-478D-A417-1B14127CC845}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zw3d_plugin", "src\zw3d_plugin\zw3d_plugin.vcxproj", "{6BF5A917-96F8-478D-A417-1B14127CC845}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

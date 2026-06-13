@@ -1,7 +1,7 @@
 #include "zwapi_ui_form.h"
 #include "zwapi_ui_tablewidget.h"
 #include "zwapi_ui_treeview.h"
-#include "..\inc\zw3d_serverPr.h"
+#include "entry.h"
 
 const char gFormName[] = "FormCmd";
 const int gTableWidgetField = 101;

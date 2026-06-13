@@ -1,6 +1,6 @@
-#include "..\inc\zw3d_serverPr.h"
+#include "entry.h"
+#include "Importer.h"
 
-static int HelloZW3DApi(void);
 static int PrintString(char* string);
 
 int RegisterCustomCommand(void)
@@ -9,11 +9,13 @@ DESCRIPTION:
    Register custom command.
 */
    {
-   /* Start the command by entering command string "~HelloZW3DApi" */
-   cvxCmdFunc("HelloZW3DApi", (void*)HelloZW3DApi, VX_CODE_GENERAL);
-
    /* Start the command by entering command string "~PrintString(Hello ZW3D API)" */
-   cvxCmdFunc("PrintString", (void*)PrintString, VX_CODE_GENERAL);
+   //cvxCmdFunc("PrintString", (void*)PrintString, VX_CODE_GENERAL);
+	ZwCommandFunctionLoad("PrintString", (void*)PrintString, ZW_LICENSE_CODE_GENERAL);
+
+	ZwCommandFunctionLoad("import", (void*)insertZwComponent, ZW_LICENSE_CODE_GENERAL);
+
+	ZwCommandFunctionLoad("trans", (void*)transStepToZ3, ZW_LICENSE_CODE_GENERAL);
    return 0;
    }
 
@@ -23,20 +25,9 @@ DESCRIPTION:
    Unload custom command.
 */
    {
-   cvxCmdFuncUnload("HelloZW3DApi");
-   cvxCmdFuncUnload("PrintString");
-   return 0;
-   }
-
-int HelloZW3DApi(void)
-/*
-DESCRIPTION:
-   Custom command.
-*/
-   {
-   // TODO: Do something
-
-   cvxMsgDisp("Hello ZW3D API");
+	ZwCommandFunctionUnload("PrintString");
+	ZwCommandFunctionUnload("import");
+	ZwCommandFunctionUnload("trans");
    return 0;
    }
 

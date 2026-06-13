@@ -1,6 +1,6 @@
 #include "zwapi_cmd_paramdefine_param.h"
 #include "zwapi_cmd_paramdefine_tpl.h"
-#include "..\inc\zw3d_serverPr.h"
+#include "entry.h"
 
 #define Field_Entity 1
 
